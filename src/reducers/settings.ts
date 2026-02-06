@@ -13,7 +13,7 @@ import {
   subunitToSats,
 } from '../utils/satoshis';
 import {startTor, stopTor} from '../utils/tor';
-import {checkFlexaCustomer, checkBuySellProviderCountry} from '../reducers/buy';
+import {checkBuySellProviderCountry} from '../reducers/buy';
 
 // types
 interface ISettings {
@@ -223,7 +223,6 @@ export const setTestPayment =
         testPaymentFiat,
       }),
     );
-    dispatch(checkFlexaCustomer());
     dispatch(checkBuySellProviderCountry());
   };
 

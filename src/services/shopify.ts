@@ -1,12 +1,4 @@
-import {createStorefrontApiClient} from '@shopify/storefront-api-client';
-
-const SHOPIFY_PUBLIC_ACCESS_TOKEN = '';
-
-export const shopifyClient = createStorefrontApiClient({
-  storeDomain: '',
-  apiVersion: '2025-10',
-  publicAccessToken: SHOPIFY_PUBLIC_ACCESS_TOKEN,
-});
+// Shopify integration disabled for Doriancoin
 
 export const PRODUCTS_QUERY = `
   query GetProducts($first: Int!) {

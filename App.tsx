@@ -23,7 +23,6 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import notifee, {AuthorizationStatus, EventType} from '@notifee/react-native';
 import * as Notifications from 'expo-notifications';
 import BootSplash from 'react-native-bootsplash';
-import {FlexaContext} from '@flexa/flexa-react-native';
 import {
   ScreenSizeProvider,
   ScreenSizeContext,
@@ -44,7 +43,6 @@ import {
 import {
   getBuyTransactionHistory,
   getSellTransactionHistory,
-  checkFlexaCustomer,
 } from './src/reducers/buy';
 import RootNavigator from './src/navigation/RootNavigator';
 import Error from './src/components/Error';
@@ -54,14 +52,6 @@ import {startTor} from './src/utils/tor';
 import initI18N from './src/utils/i18n';
 
 const {APNSTokenModule} = NativeModules;
-
-const flexaPublishableTestKey =
-  'publishable_test_5xJh36PJj2xw97G9MGgMpfW82QPvp2jPjp4r6925XQgpr9QWp2WWjjc9J8h665mHfHr6pXx4fwm674w83H2x44';
-const flexaPublishableLiveKey =
-  'publishable_live_5gXmfxGQ65vqcv99W6XqPg3HGR8CvGw8cpMpPwp7Hfcrr7jRM5MrF425gcCw4mg33Wwww2gmMRpXC4PM67VjWM';
-const flexaPublishableKey = __DEV__
-  ? flexaPublishableTestKey
-  : flexaPublishableLiveKey;
 
 type RootStackParamList = {
   Scan: {
@@ -97,7 +87,6 @@ function ContextExecutable(props: any) {
       dispatch(updateHistoricalRatesForAllPeriods());
       dispatch(getBuyTransactionHistory());
       dispatch(getSellTransactionHistory());
-      dispatch(checkFlexaCustomer());
     }
   }, [dispatch, languageCode, uniqueId, props.deviceToken]);
 
@@ -231,19 +220,6 @@ const App: React.FC = () => {
     };
   }, [deviceToken, updateDeviceToken]);
 
-  // seamless Flexa login requires extra libs
-  // useEffect(() => {
-  //   const handleUrlEvents = (urlEvent: any) => {
-  //     if (urlEvent.url) {
-  //       processUniversalLink(urlEvent.url);
-  //     }
-  //   };
-  //   const linkSubscription = Linking.addEventListener('url', handleUrlEvents);
-
-  //   Linking.getInitialURL().then(url => url && processUniversalLink(url));
-  //   return () => linkSubscription.remove();
-  // }, []);
-
   const [deviceIndex, setDeviceIndex] = useState(0);
 
   useEffect(() => {
@@ -320,21 +296,18 @@ const App: React.FC = () => {
                 <StatusBar hidden={true} backgroundColor="transparent" />
               ) : null}
               <PersistGate loading={null} persistor={pStore}>
-                <FlexaContext.FlexaContextProvider
-                  publishableKey={flexaPublishableKey}>
-                  <ContextExecutable deviceToken={deviceToken} />
-                  <DeviceTokenHandler deviceToken={deviceToken} />
-                  <OpenNotificationHandler
-                    notification={openedNotificationData}
-                  />
-                  <PopUpProvider>
-                    <GestureHandlerRootView style={styles.gestureView}>
-                      <RenderPopUps />
-                      <RootNavigator />
-                      <Error />
-                    </GestureHandlerRootView>
-                  </PopUpProvider>
-                </FlexaContext.FlexaContextProvider>
+                <ContextExecutable deviceToken={deviceToken} />
+                <DeviceTokenHandler deviceToken={deviceToken} />
+                <OpenNotificationHandler
+                  notification={openedNotificationData}
+                />
+                <PopUpProvider>
+                  <GestureHandlerRootView style={styles.gestureView}>
+                    <RenderPopUps />
+                    <RootNavigator />
+                    <Error />
+                  </GestureHandlerRootView>
+                </PopUpProvider>
               </PersistGate>
             </Provider>
           </ResizedView>

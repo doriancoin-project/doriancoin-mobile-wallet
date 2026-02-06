@@ -2216,11 +2216,6 @@
     find-up "^5.0.0"
     js-yaml "^4.1.0"
 
-"@flexa/flexa-react-native@1.0.11":
-  version "1.0.11"
-  resolved "https://registry.npmjs.org/@flexa/flexa-react-native/-/flexa-react-native-1.0.11.tgz"
-  integrity sha512-r8lcw79bTk42fu6BCjIb6WPFoztVHvnk9YwEd2+5UMTWsCNxwDInjEt6yi/g/bFFEK+iuH2mBi4kc92m1jMv1Q==
-
 "@hapi/hoek@^9.0.0", "@hapi/hoek@^9.3.0":
   version "9.3.0"
   resolved "https://registry.npmjs.org/@hapi/hoek/-/hoek-9.3.0.tgz"
@@ -3269,11 +3264,6 @@
     recyclerlistview "4.2.3"
     tslib "2.8.1"
 
-"@shopify/graphql-client@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@shopify/graphql-client/-/graphql-client-1.4.0.tgz#850a757890cf198b0a8b9e09594c633e6cbd01fc"
-  integrity sha512-tyjXkZ/rGK+x3Ep5Y0y0e6q1RbUwv759rsrkzyO7ZDK1cdTc8HP6KcbaNwTNpHO/a0ItbXMFGz5wUIRZqgDMaA==
-
 "@shopify/react-native-skia@2.0.3":
   version "2.0.3"
   resolved "https://registry.npmjs.org/@shopify/react-native-skia/-/react-native-skia-2.0.3.tgz"
@@ -3281,13 +3271,6 @@
   dependencies:
     canvaskit-wasm "0.40.0"
     react-reconciler "0.31.0"
-
-"@shopify/storefront-api-client@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@shopify/storefront-api-client/-/storefront-api-client-1.0.8.tgz#bad34920ff09dbeb67500ab5ffdaa6ff29152ca7"
-  integrity sha512-F8llAG9ANQl9HEgsjwhjOik9FcLarPFBe5DrqwbDx+qildHc1jBgWzDlIPvZAeI/fOztcXJrpGopE11S8nkAAA==
-  dependencies:
-    "@shopify/graphql-client" "^1.4.0"
 
 "@sideway/address@^4.1.5":
   version "4.1.5"
@@ -9497,10 +9480,8 @@ react-native-touch-id@4.4.1:
   resolved "https://registry.npmjs.org/react-native-touch-id/-/react-native-touch-id-4.4.1.tgz"
   integrity sha512-1jTl8fC+0fxvqegy/XXTyo6vMvPhjzkoDdaqoYZx0OH8AT250NuXnNPyKktvigIcys3+2acciqOeaCall7lrvg==
 
-react-native-turbo-lndltc@0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/react-native-turbo-lndltc/-/react-native-turbo-lndltc-0.1.4.tgz#0c6fba505349ffe47e51322d7a35e9409c7d64a9"
-  integrity sha512-A1z9K3uGuntwUd+wJdJEvH9nthk9VODPqg7Nmsd+JIxUYsZMzp4MMR+2Ozs6hvsEl9jwIbTOY7//0rexDOpEvw==
+"react-native-turbo-lnddsv@file:../react-native-turbo-lnddsv":
+  version "0.1.5"
 
 react-native-turbo-scrypt@0.0.7:
   version "0.0.7"
