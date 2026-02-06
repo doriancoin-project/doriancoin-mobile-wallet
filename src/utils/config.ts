@@ -24,6 +24,7 @@ const getMainnetConfig = (torEnabled: boolean = false) => {
   neutrino.addpeer=node0.doriancoin.com:1949
   neutrino.addpeer=node1.doriancoin.com:1949
   neutrino.addpeer=node2.doriancoin.com:1949
+  neutrino.addpeer=dsvd.doriancoin.com:11949
   neutrino.feeurl=https://blocks.doriancoin.com/api/v1/fees/recommended-lnd`;
 
   if (torEnabled) {
