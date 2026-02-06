@@ -217,7 +217,7 @@ const ConfirmBuy: React.FC<Props> = props => {
                 numberOfLines={1}
               />
               <TranslateText
-                textValue={`${ltcAmount} LTC`}
+                textValue={`${ltcAmount} DSV`}
                 maxSizeInPixels={SCREEN_HEIGHT * 0.08}
                 textStyle={styles.amountText}
                 numberOfLines={1}
@@ -236,7 +236,7 @@ const ConfirmBuy: React.FC<Props> = props => {
               <TableCell
                 titleTextKey="rate"
                 titleTextDomain="buyTab"
-                value={`${currencySymbol}${ltcPrice.toFixed(2)} per 1 LTC`}
+                value={`${currencySymbol}${ltcPrice.toFixed(2)} per 1 DSV`}
                 noBorder
               />
               <TableCell

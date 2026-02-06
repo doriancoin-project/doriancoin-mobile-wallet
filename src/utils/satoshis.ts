@@ -5,9 +5,9 @@ export const doriancoinToSubunit = (amount: number, subunit: number) => {
   switch (subunit) {
     case 0: // doriancoin
       return amount;
-    case 1: // lites
+    case 1: // mDSV
       return amount * 1000;
-    case 2: // photons
+    case 2: // μDSV
       return amount * 1000000;
     default:
       // always default doriancoin
@@ -19,9 +19,9 @@ export const subunitToSats = (amount: number, subunit: number) => {
   switch (subunit) {
     case 0: // doriancoin
       return amount * 100000000;
-    case 1: // lites
+    case 1: // mDSV
       return amount * 100000;
-    case 2: // photons
+    case 2: // μDSV
       return amount * 100;
     default:
       // always default doriancoin
@@ -33,9 +33,9 @@ export const satsToSubunit = (amount: number, subunit: number) => {
   switch (subunit) {
     case 0: // doriancoin
       return amount / 100000000;
-    case 1: // lites
+    case 1: // mDSV
       return amount / 100000;
-    case 2: // photons
+    case 2: // μDSV
       return amount / 100;
     default:
       // always default doriancoin

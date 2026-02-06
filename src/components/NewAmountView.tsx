@@ -151,7 +151,7 @@ const NewAmountView: React.FC<Props> = props => {
           ) : chartMode === 'balance' ? (
             <>
               <TranslateText
-                textValue={`${chartCursorValue.toFixed(8)} LTC`}
+                textValue={`${chartCursorValue.toFixed(8)} DSV`}
                 domain={'main'}
                 maxSizeInPixels={SCREEN_HEIGHT * 0.05}
                 textStyle={styles.amountText}

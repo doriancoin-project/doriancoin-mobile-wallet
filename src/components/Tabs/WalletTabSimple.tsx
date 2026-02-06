@@ -47,7 +47,7 @@ const WalletTabSimple: React.FC<Props> = (props: Props) => {
       <View style={styles.tab}>
         <Text style={styles.tabTitle}>{walletName}</Text>
         <Text style={[styles.tabBalance, balanceTextSizeStyle]}>
-          {balance + ' LTC'}
+          {balance + ' DSV'}
         </Text>
         <View style={styles.tabWorthContainer}>
           <Text style={styles.tabWorth}>{fiatBalance}</Text>

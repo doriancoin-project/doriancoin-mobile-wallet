@@ -438,7 +438,7 @@ const Settings: React.FC<Props> = props => {
                 maxSizeInPixels={SCREEN_HEIGHT * 0.017}
               />
               <SegmentedControl
-                values={['LTC', 'Lites', 'Photons']}
+                values={['DSV', 'mDSV', 'μDSV']}
                 selectedIndex={subunit}
                 tintColor="#2C72FF"
                 fontStyle={styles.toggleText}

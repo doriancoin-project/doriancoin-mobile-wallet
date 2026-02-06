@@ -334,10 +334,10 @@ export const subunitSymbolSelector = createSelector(
     switch (subunit) {
       case 0: // doriancoin
         return 'D';
-      case 1: // lites
-        return 'd';
-      case 2: // photons
-        return 'md';
+      case 1: // mDSV
+        return 'm';
+      case 2: // μDSV
+        return 'μ';
       default:
         // always default doriancoin
         return 'D';
@@ -351,10 +351,10 @@ export const subunitCodeSelector = createSelector(
     switch (subunit) {
       case 0: // doriancoin
         return 'DSV';
-      case 1: // lites
-        return 'lites';
-      case 2: // photons
-        return 'photons';
+      case 1: // mDSV
+        return 'mDSV';
+      case 2: // μDSV
+        return 'μDSV';
       default:
         // always default doriancoin
         return 'DSV';
