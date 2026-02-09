@@ -130,9 +130,10 @@ const ConfirmConvert: React.FC<Props> = props => {
     try {
       const amt = isRegular ? regularAmount : privateAmount;
       const destination = isRegular ? 'private' : 'regular';
-      const txid = await dispatch(
-        sendConvertWithPsbt(convertToSats(Number(amt)), destination),
-      );
+      const txid = await dispatch(sendConvertWithPsbt(
+        convertToSats(Number(amt)),
+        destination,
+      ));
       setLoading(false);
       navigation.navigate('SuccessConvert', {
         txid: String(txid),

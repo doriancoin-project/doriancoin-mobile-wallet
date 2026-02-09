@@ -174,7 +174,7 @@ const SendReceiveTxLayout: React.FC<SendReceiveLayoutProps> = props => {
         // does/doesn't have a change address
         if (myOutputElements.length > 0 && otherOutputElements.length > 0) {
           const changeAddress = (
-            <ChangeAddress>{myOutputElements}</ChangeAddress>
+            <ChangeAddress key="change-address">{myOutputElements}</ChangeAddress>
           );
           return [...otherOutputElements, changeAddress];
         } else if (

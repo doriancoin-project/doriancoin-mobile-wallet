@@ -57,11 +57,11 @@ const Receive: React.FC<Props> = () => {
 
   // update qr code when address changes
   useEffect(() => {
-    if (isMwebAddress && address.includes('ltcmweb')) {
+    if (isMwebAddress && address.includes('mweb')) {
       setMwebAddressState(address);
       dispatch(setMWEBAddressAddress(address));
       setURI(address);
-    } else if (!isMwebAddress && !address.includes('ltcmweb')) {
+    } else if (!isMwebAddress && !address.includes('mweb')) {
       setRegularAddressState(address);
       dispatch(setRegularAddressAddress(address));
       setURI(address);

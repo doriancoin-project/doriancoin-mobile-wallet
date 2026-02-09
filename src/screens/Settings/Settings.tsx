@@ -183,7 +183,6 @@ const Settings: React.FC<Props> = props => {
 
   const settingsData = useMemo(
     () => [
-      {id: 'support', type: 'support'},
       {id: 'general-header', type: 'header', textKey: 'general_settings'},
       {
         id: 'about',
@@ -249,13 +248,6 @@ const Settings: React.FC<Props> = props => {
         textKey: 'import_private_key',
         forward: true,
         onPress: () => navigation.navigate('Import'),
-      },
-      {
-        id: 'import-litewallet',
-        type: 'cell',
-        textKey: 'import_litewallet',
-        forward: true,
-        onPress: () => navigation.navigate('RecoverLitewallet'),
       },
       {
         id: 'view-seed',

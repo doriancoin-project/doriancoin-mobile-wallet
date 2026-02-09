@@ -229,12 +229,12 @@ const Sell: React.FC<Props> = () => {
             }
           } catch (error) {
             if (error instanceof Error && error.name !== 'AbortError') {
-              console.error('Fee estimation error:', error);
+              console.warn('Fee estimation error:', error);
             }
           }
         }, 500); // 500ms debounce
       } catch (error) {
-        console.error('Fee estimation setup error:', error);
+        console.warn('Fee estimation setup error:', error);
       }
     };
 

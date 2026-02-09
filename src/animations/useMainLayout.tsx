@@ -165,18 +165,7 @@ export function useMainLayout(props: Props) {
   );
 
   const rightHeaderButton = useMemo(
-    () => (
-      <View style={alignHeaderElementsWithMarginTop}>
-        <Animated.View style={[styles.headerBtns, animatedHeaderButtonOpacity]}>
-          <HeaderButton
-            onPress={() => navigation.navigate('AlertsStack')}
-            imageSource={require('../assets/icons/alerts-icon.png')}
-            rightPadding={true}
-            imageXY={{x: SCREEN_HEIGHT * 0.028, y: SCREEN_HEIGHT * 0.028}}
-          />
-        </Animated.View>
-      </View>
-    ),
+    () => null,
     [
       animatedHeaderButtonOpacity,
       navigation,

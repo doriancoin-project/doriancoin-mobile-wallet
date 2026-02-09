@@ -140,7 +140,8 @@ export default function TxDetailModalContent(props: Props) {
   const dateString = formatTxDate(transaction.timestamp);
   const currencySymbol = useAppSelector(state => currencySymbolSelector(state));
   const localFiatToUSD = useAppSelector(state => convertLocalFiatToUSD(state));
-  const priceOnDateInLocalFiat = transaction.priceOnDate / localFiatToUSD;
+  const safeFiatToUSD = localFiatToUSD || 1;
+  const priceOnDateInLocalFiat = (transaction.priceOnDate || 0) / safeFiatToUSD;
   const amountInFiatOnDate = parseFloat(
     String(priceOnDateInLocalFiat * (transaction.amount / 100000000)),
   ).toFixed(2);

@@ -708,13 +708,7 @@ export const navigationOptions = (navigation: any): StackNavigationOptions => {
         imageSource={require('../assets/icons/settings-cog.png')}
       />
     ),
-    headerRight: () => (
-      <HeaderButton
-        onPress={() => navigation.navigate('AlertsStack')}
-        imageSource={require('../assets/icons/alerts-icon.png')}
-        rightPadding={true}
-      />
-    ),
+    headerRight: () => null,
   };
 };
 

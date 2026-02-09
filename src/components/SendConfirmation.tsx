@@ -143,7 +143,7 @@ const SendConfirmation: React.FC<Props> = props => {
 
         setFee(Number(response.feeSat));
       } catch (error) {
-        console.error(error);
+        console.warn('Fee estimation failed:', error);
       }
     };
 
