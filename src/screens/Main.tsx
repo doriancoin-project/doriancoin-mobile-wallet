@@ -387,26 +387,6 @@ const Main: React.FC<Props> = props => {
     () => (
       <View style={styles.headerContainer}>
         <DashboardButton
-          textKey="buy"
-          imageSource={require('../assets/icons/buy-icon.png')}
-          handlePress={() => {
-            setBottomSheetFolded(false);
-            setActiveTab(1);
-          }}
-          active={activeTab === 1}
-          disabled={!isInternetReachable ? true : false}
-        />
-        <DashboardButton
-          textKey="sell"
-          imageSource={require('../assets/icons/sell-icon.png')}
-          handlePress={() => {
-            setBottomSheetFolded(false);
-            setActiveTab(2);
-          }}
-          active={activeTab === 2}
-          disabled={!isInternetReachable ? true : false}
-        />
-        <DashboardButton
           textKey="convert"
           wider={true}
           imageSource={require('../assets/icons/convert-icon.png')}

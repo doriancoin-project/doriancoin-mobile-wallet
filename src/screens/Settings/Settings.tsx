@@ -183,6 +183,7 @@ const Settings: React.FC<Props> = props => {
 
   const settingsData = useMemo(
     () => [
+      {id: 'support', type: 'support'},
       {id: 'general-header', type: 'header', textKey: 'general_settings'},
       {
         id: 'about',

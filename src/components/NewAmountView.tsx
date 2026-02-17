@@ -124,7 +124,7 @@ const NewAmountView: React.FC<Props> = props => {
           {!chartCursorSelected ? (
             <>
               <TranslateText
-                textValue={subunitAmountFormatted}
+                textValue={`Đ${subunitAmountFormatted}`}
                 domain={'main'}
                 maxSizeInPixels={SCREEN_HEIGHT * 0.05}
                 textStyle={styles.amountText}

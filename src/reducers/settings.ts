@@ -333,14 +333,14 @@ export const subunitSymbolSelector = createSelector(
   subunit => {
     switch (subunit) {
       case 0: // doriancoin
-        return 'D';
+        return 'Đ';
       case 1: // mDSV
         return 'm';
       case 2: // μDSV
         return 'μ';
       default:
         // always default doriancoin
-        return 'D';
+        return 'Đ';
     }
   },
 );

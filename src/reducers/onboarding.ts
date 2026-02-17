@@ -157,11 +157,6 @@ const cacheParts = [
 ];
 
 export const getNeutrinoCache = (): AppThunk => async (dispatch, getState) => {
-  // No presync cache server available for Doriancoin - skip presync entirely
-  console.log('presync skipped - no cache server for Doriancoin');
-  dispatch(getNeutrinoCacheFailedAction());
-  return;
-
   const {task, lastLoadedCachePart} = getState().onboarding!;
 
   if (task === 'complete') {
@@ -197,8 +192,6 @@ export const getNeutrinoCache = (): AppThunk => async (dispatch, getState) => {
     })
       .fetch(
         'GET',
-        // NOTE: nexuswallet.com cache is not available for Doriancoin
-        // `https://static.nexuswallet.com/cache/${cacheParts[nextPart - 1]}`,
         `https://static.doriancoin.com/cache/${cacheParts[nextPart - 1]}`,
       )
       .progress((received, total) => {
