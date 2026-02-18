@@ -22,7 +22,7 @@ import PinModalContent from '../../components/Modals/PinModalContent';
 import {resetPincode} from '../../reducers/authentication';
 import {stopLnd} from '../../reducers/lightning';
 import {useAppDispatch} from '../../store/hooks';
-import {sleep} from '../../utils/poll';
+import {sleep, stopAllPollers} from '../../utils/poll';
 import {purgeStore} from '../../store';
 import {deleteLNDDir} from '../../utils/file';
 import {resetToLoading} from '../../navigation/NavigationService';
@@ -78,6 +78,7 @@ const ResetWallet: React.FC<Props> = () => {
 
   const handleReset = async () => {
     dispatch(resetPincode());
+    stopAllPollers();
     await dispatch(stopLnd());
     await purgeStore();
     await deleteLNDDir();

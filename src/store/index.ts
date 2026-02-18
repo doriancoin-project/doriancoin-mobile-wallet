@@ -1,6 +1,4 @@
 import {configureStore} from '@reduxjs/toolkit';
-import * as RNFS from '@dr.pogodin/react-native-fs';
-
 import {
   persistStore,
   persistReducer,
@@ -49,6 +47,5 @@ export type AppDispatch = typeof store.dispatch;
 
 // completely purges store!
 export const purgeStore = async () => {
-  pStore.purge();
-  await RNFS.unlink(`${RNFS.DocumentDirectoryPath}/mmkv/`);
+  await pStore.purge();
 };

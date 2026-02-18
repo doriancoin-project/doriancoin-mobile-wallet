@@ -101,6 +101,7 @@ const Verify: React.FC<Props> = props => {
   };
 
   useEffect(() => {
+    const newScrambled = [];
     for (let i = 1; i < 9; i++) {
       const challengeArray = randomShuffle([
         seed[3 * i - 2],
@@ -108,9 +109,9 @@ const Verify: React.FC<Props> = props => {
         getBIP39Word(),
         getBIP39Word(),
       ]);
-
-      setScrambledArray(arrayItems => [...arrayItems, ...challengeArray]);
+      newScrambled.push(...challengeArray);
     }
+    setScrambledArray(newScrambled);
   }, [seed]);
 
   return (
