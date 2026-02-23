@@ -49,7 +49,7 @@
     "skip_presync_description": "Pomijając presync, będziesz musiał poczekać, aż Twój portfel Doriancoin zostanie w pełni zsynchronizowany, zanim będziesz mógł wysyłać lub odbierać transakcje. Ten proces może potrwać do 30+ minut.",
     "cancel": "Anuluj",
     "ok": "OK",
-    "txs_take_time_to_appear": "Chociaż Twoje transakcje zostały załadowane, może minąć trochę czasu, zanim się pojawią i saldo zostanie przeliczone. Po prostu pozostaw aplikację otwartą.",
+    "txs_take_time_to_appear": "Trwa początkowa synchronizacja blockchain. Jest to jednorazowy proces, który zwykle trwa 1-2 minuty.",
     "recover_pin": "Potwierdź PIN"
   },
   "main": {
@@ -92,8 +92,9 @@
     "blockchain": "BLOCKCHAIN",
     "details": "SZCZEGÓŁY",
     "empty_transactions": "Twoje transakcje pojawią się tutaj",
-    "load_txs": "Ładowanie transakcji...",
+    "load_txs": "Synchronizacja Blockchain",
     "recover_txs": "Odzyskiwanie transakcji...",
+    "sync_almost_done": "Prawie gotowe...",
     "taking_too_long": "Wymagany restart aplikacji.",
     "1d": "1D",
     "1w": "1T",

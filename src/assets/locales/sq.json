@@ -49,7 +49,7 @@
     "skip_presync_description": "Duke kaluar presync, do të duhet të presesh që portofoli yt Doriancoin të sinkronizohet plotësisht para se të mund të dërgosh ose marrsh transaksione. Ky proces mund të zgjatë deri në 30+ minuta.",
     "cancel": "Anulo",
     "ok": "OK",
-    "txs_take_time_to_appear": "Edhe pse transaksionet tuaja janë ngarkuar, mund të duhet pak kohë që ato të shfaqen dhe të ri-llogaritet balanca juaj. Thjesht lërni aplikacionin të hapur.",
+    "txs_take_time_to_appear": "Sinkronizimi fillestar i blockchain-it është në progres. Ky është një proces njëherësh dhe zakonisht zgjat 1-2 minuta.",
     "recover_pin": "Konfirmo PIN"
   },
   "main": {
@@ -92,8 +92,9 @@
     "blockchain": "BLOCKCHAIN",
     "details": "DETAJE",
     "empty_transactions": "Transaksionet e tua do të shfaqen këtu",
-    "load_txs": "Po ngarkohen transaksionet...",
+    "load_txs": "Duke sinkronizuar Blockchain-in",
     "recover_txs": "Po rikuperohen transaksionet...",
+    "sync_almost_done": "Pothuajse gati...",
     "taking_too_long": "Kërkohet rianisjimi i aplikacionit.",
     "1d": "1 DITË",
     "1w": "1 JAVË",

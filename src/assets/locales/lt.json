@@ -49,7 +49,7 @@
     "skip_presync_description": "Praleidžiant pirminių sinchronizaciją, reikės palaukti, kol jūsų Doriancoin Wallet visiškai sinchronizuosis, prieš galint siųsti ar gauti sandorius. Šis procesas gali užtrukti iki 30+ minučių.",
     "cancel": "Atšaukti",
     "ok": "OK",
-    "txs_take_time_to_appear": "Nors jūsų operacijos jau įkeltos, gali prireikti šiek tiek laiko, kol jos bus rodomos ir jūsų likutis bus perskaičiuotas. Tiesiog palikite programėlę atidarytą.",
+    "txs_take_time_to_appear": "Vyksta pradinė blokų grandinės sinchronizacija. Tai vienkartinis procesas, kuris paprastai trunka 1-2 minutes.",
     "recover_pin": "Patvirtinti PIN"
   },
   "main": {
@@ -92,8 +92,9 @@
     "blockchain": "BLOKŲ GRANDINĖ",
     "details": "DETALĖS",
     "empty_transactions": "Jūsų sandoriai bus rodomi čia",
-    "load_txs": "Operacijų įkėlimas...",
+    "load_txs": "Sinchronizuojama blokų grandinė",
     "recover_txs": "Sandorių atkūrimas...",
+    "sync_almost_done": "Beveik baigta...",
     "taking_too_long": "Reikalingas programos paleidimas iš naujo.",
     "1d": "1D",
     "1w": "1SAV",

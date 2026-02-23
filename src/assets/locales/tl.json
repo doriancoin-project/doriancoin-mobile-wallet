@@ -49,7 +49,7 @@
     "skip_presync_description": "Sa paglaktaw sa presync, kailangan mong maghintay na maging fully sync ang iyong Doriancoin Wallet bago ka makapagpadala o makatanggap ng mga transaksyon. Ang prosesong ito ay maaaring tumagal ng hanggang 30+ minuto.",
     "cancel": "Kanselahin",
     "ok": "OK",
-    "txs_take_time_to_appear": "Kahit na na-load na ang iyong mga transaksyon, maaaring tumagal ng kaunti bago ito lumitaw at ma-recalculate ang iyong balanse. Iwanan mo lang na bukas ang app.",
+    "txs_take_time_to_appear": "Ang paunang pag-sync ng blockchain ay kasalukuyang isinasagawa. Ito ay isang beses na proseso at karaniwang tumatagal ng 1-2 minuto.",
     "recover_pin": "Kumpirmahin ang PIN"
   },
   "main": {
@@ -92,8 +92,9 @@
     "blockchain": "BLOCKCHAIN",
     "details": "MGA DETALYE",
     "empty_transactions": "Lalabas dito ang iyong mga transaksyon",
-    "load_txs": "Naglo-load ng mga transaksyon...",
+    "load_txs": "Sine-sync ang Blockchain",
     "recover_txs": "Nagre-recover ng mga transaksyon...",
+    "sync_almost_done": "Halos tapos na...",
     "taking_too_long": "Kailangan ng pag-restart ng app.",
     "1d": "1D",
     "1w": "1W",

@@ -13,6 +13,9 @@ interface Props {}
 const TransactionListEmpty: React.FC<Props> = () => {
   const synced = useAppSelector(state => syncStatusSelector(state));
   const recoveryMode = useAppSelector(state => state.info.recoveryMode);
+  const beingRecovered = useAppSelector(
+    state => state.onboarding.beingRecovered,
+  );
 
   const {width: SCREEN_WIDTH, height: SCREEN_HEIGHT} =
     useContext(ScreenSizeContext);
@@ -44,7 +47,7 @@ const TransactionListEmpty: React.FC<Props> = () => {
 
   return (
     <View style={styles.container}>
-      {!synced || recoveryMode ? syncingWallet : emptyWallet}
+      {beingRecovered && (!synced || recoveryMode) ? syncingWallet : emptyWallet}
     </View>
   );
 };

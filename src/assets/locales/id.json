@@ -49,7 +49,7 @@
     "skip_presync_description": "Dengan melewati presync, Anda perlu menunggu Doriancoin Wallet Anda sepenuhnya tersinkronisasi sebelum Anda dapat mengirim atau menerima transaksi. Proses ini dapat memakan waktu hingga 30+ menit.",
     "cancel": "Batalkan",
     "ok": "OK",
-    "txs_take_time_to_appear": "Transaksi Anda akan muncul di sini setelah sinkronisasi selesai. Silakan tunggu sebentar.",
+    "txs_take_time_to_appear": "Sinkronisasi awal blockchain sedang berlangsung. Ini adalah proses satu kali dan biasanya memakan waktu 1-2 menit.",
     "recover_pin": "Konfirmasi PIN"
   },
   "main": {
@@ -92,8 +92,9 @@
     "blockchain": "BLOCKCHAIN",
     "details": "RINCIAN",
     "empty_transactions": "Transaksi Anda akan muncul di sini.",
-    "load_txs": "Memuat Transaksi...",
+    "load_txs": "Menyinkronkan Blockchain",
     "recover_txs": "Memulihkan Transaksi...",
+    "sync_almost_done": "Hampir selesai...",
     "taking_too_long": "Aplikasi perlu direstart.",
     "1d": "1H",
     "1w": "1M",

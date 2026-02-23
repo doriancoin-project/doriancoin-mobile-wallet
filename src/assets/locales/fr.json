@@ -49,7 +49,7 @@
     "skip_presync_description": "En ignorant la pré-synchronisation, vous devrez attendre que votre Doriancoin Wallet se synchronise complètement avant de pouvoir envoyer ou recevoir des transactions. Ce processus peut prendre jusqu'à 30+ minutes.",
     "cancel": "Annuler",
     "ok": "OK",
-    "txs_take_time_to_appear": "Vos transactions apparaîtront ici après la fin de la synchronisation. Veuillez patienter un moment.",
+    "txs_take_time_to_appear": "Synchronisation initiale de la blockchain en cours. C'est un processus unique qui prend généralement 1 à 2 minutes.",
     "recover_pin": "Confirmer le PIN"
   },
   "main": {
@@ -92,8 +92,9 @@
     "blockchain": "Blockchain",
     "details": "Détails",
     "empty_transactions": "Vos transactions apparaîtront ici",
-    "load_txs": "Chargement des transactions...",
+    "load_txs": "Synchronisation de la Blockchain",
     "recover_txs": "Récupération des transactions...",
+    "sync_almost_done": "Presque terminé...",
     "taking_too_long": "Redémarrage de l'application requis.",
     "1d": "1J",
     "1w": "1S",

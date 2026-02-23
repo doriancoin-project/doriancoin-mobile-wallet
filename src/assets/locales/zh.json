@@ -49,7 +49,7 @@
     "skip_presync_description": "跳过预同步，您需要等待Doriancoin钱包完全同步，然后才能发送或接收交易。此过程可能需要30+分钟。",
     "cancel": "取消",
     "ok": "确定",
-    "txs_take_time_to_appear": "虽然您的交易记录已加载，但可能需要一些时间才能显示并重新计算您的余额。请保持应用程序处于开启状态。",
+    "txs_take_time_to_appear": "正在进行初始区块链同步。这是一次性过程，通常需要1-2分钟。",
     "recover_pin": "确认PIN"
   },
   "main": {
@@ -92,8 +92,9 @@
     "blockchain": "区块链",
     "details": "详细内容",
     "empty_transactions": "您的交易记录会出现在这里",
-    "load_txs": "正在加载交易记录…",
+    "load_txs": "正在同步区块链",
     "recover_txs": "交易记录正在恢复中…",
+    "sync_almost_done": "即将完成...",
     "taking_too_long": "需要重启应用程序。",
     "1d": "一天",
     "1w": "一周",

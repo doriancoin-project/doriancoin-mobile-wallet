@@ -49,7 +49,7 @@
     "skip_presync_description": "Wenn Sie die Vorsynchronisierung überspringen, müssen Sie warten, bis Ihr Doriancoin Wallet vollständig synchronisiert ist, bevor Sie Transaktionen senden oder empfangen können. Dieser Vorgang kann bis zu 30+ Minuten dauern.",
     "cancel": "Abbrechen",
     "ok": "OK",
-    "txs_take_time_to_appear": "Obwohl deine Transaktionen geladen wurden, kann es etwas dauern, bis sie angezeigt werden und dein Kontostand neu berechnet wird. Lass einfach die App geöffnet.",
+    "txs_take_time_to_appear": "Die erste Blockchain-Synchronisierung läuft. Dies ist ein einmaliger Vorgang und dauert in der Regel 1-2 Minuten.",
     "recover_pin": "PIN bestätigen"
   },
   "main": {
@@ -92,8 +92,9 @@
     "blockchain": "BLOCKCHAIN",
     "details": "DETAILS",
     "empty_transactions": "Die Transaktion erscheint hier",
-    "load_txs": "Lade Transaktionen...",
+    "load_txs": "Blockchain wird synchronisiert",
     "recover_txs": "Transaktionen wiederherstellen",
+    "sync_almost_done": "Fast fertig...",
     "taking_too_long": "App-Neustart erforderlich.",
     "1d": "1T",
     "1w": "1W",

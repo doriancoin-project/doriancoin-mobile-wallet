@@ -130,6 +130,9 @@ const TransactionList = forwardRef((props: Props, ref) => {
   const FOLD_SNAP_POINT = FOLD_SHEET_POINT - SWIPE_TRIGGER_Y_RANGE;
 
   const {recoveryMode, syncedToChain} = useAppSelector(state => state.info!);
+  const beingRecovered = useAppSelector(
+    state => state.onboarding.beingRecovered,
+  );
   const progress = useAppSelector(state => decimalSyncedSelector(state));
   const recoveryProgress = useAppSelector(state =>
     recoveryProgressSelector(state),
@@ -318,7 +321,7 @@ const TransactionList = forwardRef((props: Props, ref) => {
         : Math.floor(decProgress * 10 * 100) / 10
       : 0.1;
 
-  // When loading and not updating the state for more than 10 sec
+  // When loading and not updating the state for more than 120 sec
   // consider there's a problem with connection and show the note
   const loadingTimeout = useRef<NodeJS.Timeout | undefined>(undefined);
   const [takingTooLong, setTakingTooLong] = useState(false);
@@ -329,7 +332,7 @@ const TransactionList = forwardRef((props: Props, ref) => {
     if (percentageProgress < 99 && !recoveryMode && recoveryProgress !== 0) {
       loadingTimeout.current = setTimeout(() => {
         setTakingTooLong(true);
-      }, 10000);
+      }, 120000);
     }
     return () => {
       clearTimeout(loadingTimeout.current);
@@ -346,12 +349,22 @@ const TransactionList = forwardRef((props: Props, ref) => {
           textStyle={styles.sectionHeaderText}
           numberOfLines={1}
         />
-        <TranslateText
-          textValue={` (${percentageProgress}%) `}
-          maxSizeInPixels={SCREEN_HEIGHT * 0.013}
-          textStyle={styles.sectionHeaderText}
-          numberOfLines={1}
-        />
+        {percentageProgress >= 99 ? (
+          <TranslateText
+            textKey={'sync_almost_done'}
+            domain="main"
+            maxSizeInPixels={SCREEN_HEIGHT * 0.013}
+            textStyle={styles.sectionHeaderText}
+            numberOfLines={1}
+          />
+        ) : (
+          <TranslateText
+            textValue={` (${percentageProgress}%) `}
+            maxSizeInPixels={SCREEN_HEIGHT * 0.013}
+            textStyle={styles.sectionHeaderText}
+            numberOfLines={1}
+          />
+        )}
         {takingTooLong ? (
           <TranslateText
             textKey={'taking_too_long'}
@@ -439,7 +452,7 @@ const TransactionList = forwardRef((props: Props, ref) => {
         estimatedItemSize={70}
         ListEmptyComponent={<TransactionListEmpty />}
         ListHeaderComponent={
-          recoveryMode || !syncedToChain ? (
+          beingRecovered && (recoveryMode || !syncedToChain) ? (
             <TranslateText
               textKey={'txs_take_time_to_appear'}
               domain="onboarding"
@@ -463,6 +476,7 @@ const TransactionList = forwardRef((props: Props, ref) => {
       handleFold,
       recoveryMode,
       syncedToChain,
+      beingRecovered,
       styles,
     ],
   );
@@ -597,7 +611,7 @@ const TransactionList = forwardRef((props: Props, ref) => {
 
   return renderTxs ? (
     <View style={{height: scrollContainerHeight}}>
-      {!syncedToChain ? SyncProgressIndicator : <></>}
+      {!syncedToChain && beingRecovered ? SyncProgressIndicator : <></>}
       {mainSheetsTranslationY ? (
         <GestureDetector gesture={panGesture}>{FlashListMemo}</GestureDetector>
       ) : (
